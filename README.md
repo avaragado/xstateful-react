@@ -165,11 +165,11 @@ import { createReactMachine } from '@avaragado/xstateful-react';
 
 ### `createReactMachine` function
 
-#### `createReactMachine(XStateful) => React.ComponentType
+#### `createReactMachine(XStateful) => React.ComponentType`
 
 Returns a general-purpose React consumer component (let's call it `Machine`) tied to the input `XStateful` instance. `Machine` has other components as properties `Activity`, `State`, `Provider` and `Control`.
 
-### Machine
+### `Machine`
 
 This is a React component that gives access to values from `Machine.Provider` rendered higher in the tree. Use these values, through props, to determine whether to render other components.
 
@@ -234,7 +234,7 @@ Examples:
 </Machine>
 ```
 
-### Machine.Activity
+### `Machine.Activity`
 
 This is a React component that sprinkles some sugar over `Machine`, focusing on the activities emitted by the statechart.
 
@@ -276,7 +276,7 @@ Examples:
 </Machine.Activity>
 ```
 
-### Machine.State
+### `Machine.State`
 
 This is a React component that sprinkles some sugar over `Machine`, focusing on the current state(s) of the statechart.
 
@@ -322,13 +322,13 @@ Examples:
 </Machine.State>
 ```
 
-### Machine.Provider
+### `Machine.Provider`
 
 This React component holds the link to the `XStateful` instance for the statechart. It provides current machine state and extended state values, and functions to send events, to all consumer components (`Machine`, `Machine.Activity`, `Machine.State`) rendered as descendants in the render tree.
 
 No props.
 
-### Machine.Control
+### `Machine.Control`
 
 This React component includes two props that map to React lifecycle methods. Use these props to initialise and/or send events to the statechart when the React component mounts and/or unmounts. Not all apps need to use it.
 
@@ -353,7 +353,7 @@ Examples:
 
 <Machine.Control
     onDidMount={({ transition }) => transition('POWER_ON')}
-    onDidMount={({ transition }) => transition('POWER_OFF')}
+    onWillUnmount={({ transition }) => transition('POWER_OFF')}
 >
     ...
 </Machine.Control>
