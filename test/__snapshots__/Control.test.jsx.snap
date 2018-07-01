@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Control always renders children 1`] = `"pass"`;
+
+exports[`Control invokes appropriate callback when mounted 1`] = `"pass"`;
+
+exports[`Control invokes appropriate callback when unmounted 1`] = `"pass"`;
+
+exports[`Control works 1`] = `"pass"`;

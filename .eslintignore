@@ -1,0 +1,8 @@
+flow-typed/*
+dist/*
+flow-coverage/*
+coverage/*
+
+# examples
+**/node_modules/*
+**/dist/*

@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TestMachine children function - cond boolean false 1`] = `
+<div>
+  <p>
+    Keys: 
+    state
+    extstate
+    init
+    transition
+    match
+  </p>
+  <p>
+    JSON: 
+    {"state":{"value":"first","actions":[],"activities":{},"data":{},"events":[]},"extstate":{},"match":false}
+  </p>
+</div>
+`;
+
+exports[`TestMachine children function - cond boolean true 1`] = `
+<div>
+  <p>
+    Keys: 
+    state
+    extstate
+    init
+    transition
+    match
+  </p>
+  <p>
+    JSON: 
+    {"state":{"value":"first","actions":[],"activities":{},"data":{},"events":[]},"extstate":{},"match":true}
+  </p>
+</div>
+`;
+
+exports[`TestMachine children function - cond function false 1`] = `
+<div>
+  <p>
+    Keys: 
+    state
+    extstate
+    init
+    transition
+    match
+  </p>
+  <p>
+    JSON: 
+    {"state":{"value":"first","actions":[],"activities":{},"data":{},"events":[]},"extstate":{"foo":1},"match":false}
+  </p>
+</div>
+`;
+
+exports[`TestMachine children function - cond function true 1`] = `
+<div>
+  <p>
+    Keys: 
+    state
+    extstate
+    init
+    transition
+    match
+  </p>
+  <p>
+    JSON: 
+    {"state":{"value":"first","actions":[],"activities":{},"data":{},"events":[]},"extstate":{"foo":1},"match":true}
+  </p>
+</div>
+`;
+
+exports[`TestMachine children node - cond boolean false 1`] = `null`;
+
+exports[`TestMachine children node - cond boolean true 1`] = `"pass"`;
+
+exports[`TestMachine children node - cond function false 1`] = `null`;
+
+exports[`TestMachine children node - cond function true 1`] = `"pass"`;
+
+exports[`TestMachine component - cond boolean false 1`] = `null`;
+
+exports[`TestMachine component - cond boolean true 1`] = `
+<div>
+  <p>
+    Keys: 
+    state
+    extstate
+    init
+    transition
+  </p>
+  <p>
+    JSON: 
+    {"state":{"value":"first","actions":[],"activities":{},"data":{},"events":[]},"extstate":{}}
+  </p>
+</div>
+`;
+
+exports[`TestMachine component - cond function false 1`] = `null`;
+
+exports[`TestMachine component - cond function true 1`] = `
+<div>
+  <p>
+    Keys: 
+    state
+    extstate
+    init
+    transition
+  </p>
+  <p>
+    JSON: 
+    {"state":{"value":"first","actions":[],"activities":{},"data":{},"events":[]},"extstate":{"foo":1}}
+  </p>
+</div>
+`;
+
+exports[`TestMachine missing component/render/children 1`] = `null`;
+
+exports[`TestMachine missing cond - children fn 1`] = `"pass"`;
+
+exports[`TestMachine missing cond - children node 1`] = `"pass"`;
+
+exports[`TestMachine missing cond - component 1`] = `"pass"`;
+
+exports[`TestMachine missing cond - render 1`] = `"pass"`;
+
+exports[`TestMachine order - component > children 1`] = `"pass"`;
+
+exports[`TestMachine order - component > render 1`] = `"pass"`;
+
+exports[`TestMachine order - render > children 1`] = `"pass"`;
+
+exports[`TestMachine render - cond boolean false 1`] = `null`;
+
+exports[`TestMachine render - cond boolean true 1`] = `
+<div>
+  <p>
+    Keys: 
+    state
+    extstate
+    init
+    transition
+  </p>
+  <p>
+    JSON: 
+    {"state":{"value":"first","actions":[],"activities":{},"data":{},"events":[]},"extstate":{}}
+  </p>
+</div>
+`;
+
+exports[`TestMachine render - cond function false 1`] = `null`;
+
+exports[`TestMachine render - cond function true 1`] = `
+<div>
+  <p>
+    Keys: 
+    state
+    extstate
+    init
+    transition
+  </p>
+  <p>
+    JSON: 
+    {"state":{"value":"first","actions":[],"activities":{},"data":{},"events":[]},"extstate":{"foo":1}}
+  </p>
+</div>
+`;

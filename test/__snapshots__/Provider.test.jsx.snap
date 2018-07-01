@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Provider ignores value prop 1`] = `"{\\"state\\":{\\"value\\":\\"first\\",\\"actions\\":[],\\"activities\\":{},\\"data\\":{},\\"events\\":[]},\\"extstate\\":{}}"`;

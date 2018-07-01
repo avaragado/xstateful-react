@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Consumer invoking init callback calls xsf.init 1`] = `
+<div>
+  <p>
+    state: 
+    null
+  </p>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    init
+  </button>
+</div>
+`;
+
+exports[`Consumer invoking init callback calls xsf.init 2`] = `
+<div>
+  <p>
+    state: 
+    {"value":"first","actions":[],"activities":{},"data":{},"events":[]}
+  </p>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    init
+  </button>
+</div>
+`;
+
+exports[`Consumer invoking transition callback calls xsf.transition 1`] = `
+<div>
+  <p>
+    state: 
+    {"value":"first","actions":[],"activities":{},"data":{},"events":[]}
+  </p>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    transition
+  </button>
+</div>
+`;
+
+exports[`Consumer invoking transition callback calls xsf.transition 2`] = `
+<div>
+  <p>
+    state: 
+    {"value":"second","history":{"value":"first","actions":[],"activities":{},"data":{},"events":[]},"actions":[],"activities":{},"data":{},"events":[]}
+  </p>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    transition
+  </button>
+</div>
+`;
+
+exports[`Consumer renders current state and extstate 1`] = `
+<div>
+  <p>
+    state: 
+    {"value":"first","actions":[],"activities":{},"data":{},"events":[]}
+  </p>
+  <p>
+    extstate: 
+    {"foo":1}
+  </p>
+</div>
+`;
+
+exports[`Consumer renders current state and extstate 2`] = `
+<div>
+  <p>
+    state: 
+    {"value":"second","history":{"value":"first","actions":[],"activities":{},"data":{},"events":[]},"actions":[],"activities":{},"data":{},"events":[]}
+  </p>
+  <p>
+    extstate: 
+    {"foo":1}
+  </p>
+</div>
+`;
+
+exports[`Consumer renders current state and extstate 3`] = `
+<div>
+  <p>
+    state: 
+    {"value":"second","history":{"value":"first","actions":[],"activities":{},"data":{},"events":[]},"actions":[],"activities":{},"data":{},"events":[]}
+  </p>
+  <p>
+    extstate: 
+    {"foo":2}
+  </p>
+</div>
+`;
+
+exports[`Consumer supplies init callback 1`] = `"pass"`;
+
+exports[`Consumer supplies transition callback 1`] = `"pass"`;

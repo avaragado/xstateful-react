@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Activity copes before xsf.init() 1`] = `
+Array [
+  "pass",
+  "pass",
+  "pass",
+  "pass",
+  "pass",
+  "pass",
+]
+`;
+
+exports[`Activity is > not 1`] = `"pass"`;
+
+exports[`Activity is array 1`] = `
+Array [
+  "pass",
+  "pass",
+]
+`;
+
+exports[`Activity is function 1`] = `
+Array [
+  "pass",
+  "pass",
+]
+`;
+
+exports[`Activity is string 1`] = `
+Array [
+  "pass",
+  "pass",
+]
+`;
+
+exports[`Activity no test prop at all is equivalent to a match 1`] = `"pass"`;
+
+exports[`Activity not array 1`] = `
+Array [
+  "pass",
+  "pass",
+]
+`;
+
+exports[`Activity not function 1`] = `
+Array [
+  "pass",
+  "pass",
+]
+`;
+
+exports[`Activity not string 1`] = `
+Array [
+  "pass",
+  "pass",
+]
+`;
+
+exports[`Activity passes component/render/children props down 1`] = `
+Array [
+  "pass",
+  "pass",
+  "pass",
+  "pass",
+]
+`;
