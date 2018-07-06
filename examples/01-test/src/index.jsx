@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import { Machine } from 'xstate';
 import { createStatefulMachine } from '@avaragado/xstateful';
-import { createReactMachine } from '@avaragado/xstateful-react';
+import { createReactMachine } from '../../..';
 
 const machine = Machine({
     key: 'test',

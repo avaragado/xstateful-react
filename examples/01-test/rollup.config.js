@@ -13,11 +13,7 @@ export default {
         format: 'iife',
     },
     plugins: [
-        resolve({
-            jsnext: true,
-            browser: true,
-            main: true,
-        }),
+        resolve(),
         commonjs(),
         replace({
             'process.env.NODE_ENV': JSON.stringify(NODE_ENV),

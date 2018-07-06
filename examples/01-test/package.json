@@ -24,8 +24,7 @@
         "serve": "^9.1.0"
     },
     "dependencies": {
-        "@avaragado/xstateful": "../../../xstateful/avaragado-xstateful-v0.1.0.tgz",
-        "@avaragado/xstateful-react": "../../../xstateful-react/avaragado-xstateful-react-v0.1.0.tgz",
+        "@avaragado/xstateful": "^0.5.0",
         "react": "^16.4.1",
         "react-dom": "^16.4.1",
         "xstate": "^3.3.2"
