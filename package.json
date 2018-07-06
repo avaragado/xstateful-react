@@ -35,7 +35,7 @@
         "tiny-emitter": "^2.0.2"
     },
     "devDependencies": {
-        "@avaragado/xstateful": "link:../xstateful",
+        "@avaragado/xstateful": "^0.5.0",
         "babel-core": "6",
         "babel-eslint": "^8.2.5",
         "babel-jest": "^23.2.0",
@@ -103,8 +103,13 @@
             "git add"
         ]
     },
+    "standard-version": {
+        "scripts": {
+            "postchangelog": "prettier --write CHANGELOG.md"
+        }
+    },
     "peerDependencies": {
-        "@avaragado/xstateful": "link:../xstateful",
+        "@avaragado/xstateful": "^0.5.0",
         "react": "^16.4.1",
         "react-dom": "^16.4.1",
         "xstate": "^3.3.2"

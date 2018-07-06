@@ -2,9 +2,11 @@
 # yarn lockfile v1
 
 
-"@avaragado/xstateful@link:../xstateful":
-  version "0.0.0"
-  uid ""
+"@avaragado/xstateful@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@avaragado/xstateful/-/xstateful-0.5.0.tgz#010d4bfa66fd9aef7043756a186439758af5c02a"
+  dependencies:
+    tiny-emitter "^2.0.2"
 
 "@babel/code-frame@7.0.0-beta.44":
   version "7.0.0-beta.44"
