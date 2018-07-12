@@ -2,6 +2,8 @@
 
 > Use [`@avaragado/xstateful`](https://github.com/avaragado/xstateful) with React, accessing states and activities from multiple statecharts anywhere in your app
 
+See https://codesandbox.io/s/6lyq0yl4rz for a full example, simulating UK-style traffic lights and a pedestrian crossing (the source is in the `examples/pelican` directory).
+
 ## Features
 
 -   **Provider/consumer model** Call a function to create React components from an `XStateful` instance. Add the provider near the app root, and use consumers lower down the tree to access machine state and extended state.
