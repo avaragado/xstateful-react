@@ -2,9 +2,11 @@
 # yarn lockfile v1
 
 
-"@avaragado/xstateful-react@link:../..":
-  version "0.0.0"
-  uid ""
+"@avaragado/xstateful-react@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@avaragado/xstateful-react/-/xstateful-react-0.5.0.tgz#7d4150fda9ea5a6f42581064a569ed61285e67f3"
+  dependencies:
+    tiny-emitter "^2.0.2"
 
 "@avaragado/xstateful@^0.5.0":
   version "0.5.0"

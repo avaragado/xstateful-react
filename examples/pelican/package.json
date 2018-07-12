@@ -4,7 +4,7 @@
     "private": true,
     "dependencies": {
         "@avaragado/xstateful": "^0.5.0",
-        "@avaragado/xstateful-react": "link:../../",
+        "@avaragado/xstateful-react": "^0.5.0",
         "react": "^16.4.1",
         "react-dom": "^16.4.1",
         "react-scripts": "1.1.4",
