@@ -52,6 +52,7 @@ Use one module to export an `XStateful` instance and the React components genera
 
 import { Machine } from 'xstate';
 import { createStatefulMachine } from '@avaragado/xstateful';
+import { createReactMachine } from '@avaragado/xstateful-react';
 
 const machine = Machine({
     // xstate machine configuration
