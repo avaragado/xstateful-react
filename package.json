@@ -36,6 +36,7 @@
     },
     "devDependencies": {
         "@avaragado/xstateful": "^0.5.0",
+        "all-contributors-cli": "^5.3.0",
         "babel-core": "6",
         "babel-eslint": "^8.2.5",
         "babel-jest": "^23.2.0",
@@ -92,7 +93,9 @@
         "build": "yarn build:dev && yarn build:prod && yarn flow-copy-source",
         "precommit": "lint-staged",
         "release": "standard-version",
-        "release:dryrun": "standard-version --dry-run"
+        "release:dryrun": "standard-version --dry-run",
+        "contributors:add": "all-contributors add",
+        "contributors:generate": "all-contributors generate"
     },
     "publishConfig": {
         "access": "public"
