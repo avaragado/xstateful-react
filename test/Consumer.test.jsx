@@ -96,6 +96,26 @@ describe('Consumer', () => {
         expect(tree).toMatchSnapshot();
     });
 
+    test('supplies setExtState callback', () => {
+        const xsf = createStatefulMachine({ machine });
+        xsf.init();
+
+        const { Provider, Consumer } = createReactMachine(xsf);
+
+        const component = renderer.create(
+            <Provider>
+                <Consumer>
+                    {({ setExtState }) =>
+                        typeof setExtState === 'function' ? 'pass' : 'fail'
+                    }
+                </Consumer>
+            </Provider>,
+        );
+
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+
     test('invoking init callback calls xsf.init', () => {
         const xsf = createStatefulMachine({ machine });
 
@@ -140,6 +160,42 @@ describe('Consumer', () => {
                             <button
                                 type="button"
                                 onClick={() => transition('NEXT')}
+                            >
+                                transition
+                            </button>
+                        </div>
+                    )}
+                </Consumer>
+            </Provider>,
+        );
+
+        let tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+
+        tree.children[1].props.onClick();
+
+        tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+
+    test('invoking setExtState callback calls xsf.setExtState', () => {
+        const extstate = { foo: 1 };
+        const xsf = createStatefulMachine({ machine, extstate });
+        xsf.init();
+
+        const { Provider, Consumer } = createReactMachine(xsf);
+
+        const component = renderer.create(
+            <Provider>
+                <Consumer>
+                    {({ setExtState, extstate: xs }) => (
+                        <div>
+                            <p>extstate: {JSON.stringify(xs)}</p>
+                            <button
+                                type="button"
+                                onClick={() =>
+                                    setExtState(xxs => ({ foo: xxs.foo + 1 }))
+                                }
                             >
                                 transition
                             </button>

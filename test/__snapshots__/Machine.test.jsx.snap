@@ -8,6 +8,7 @@ exports[`TestMachine children function - cond boolean false 1`] = `
     extstate
     init
     transition
+    setExtState
     match
   </p>
   <p>
@@ -25,6 +26,7 @@ exports[`TestMachine children function - cond boolean true 1`] = `
     extstate
     init
     transition
+    setExtState
     match
   </p>
   <p>
@@ -42,6 +44,7 @@ exports[`TestMachine children function - cond function false 1`] = `
     extstate
     init
     transition
+    setExtState
     match
   </p>
   <p>
@@ -59,6 +62,7 @@ exports[`TestMachine children function - cond function true 1`] = `
     extstate
     init
     transition
+    setExtState
     match
   </p>
   <p>
@@ -86,6 +90,7 @@ exports[`TestMachine component - cond boolean true 1`] = `
     extstate
     init
     transition
+    setExtState
   </p>
   <p>
     JSON: 
@@ -104,6 +109,7 @@ exports[`TestMachine component - cond function true 1`] = `
     extstate
     init
     transition
+    setExtState
   </p>
   <p>
     JSON: 
@@ -138,6 +144,7 @@ exports[`TestMachine render - cond boolean true 1`] = `
     extstate
     init
     transition
+    setExtState
   </p>
   <p>
     JSON: 
@@ -156,6 +163,7 @@ exports[`TestMachine render - cond function true 1`] = `
     extstate
     init
     transition
+    setExtState
   </p>
   <p>
     JSON: 

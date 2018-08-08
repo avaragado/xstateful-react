@@ -30,6 +30,36 @@ exports[`Consumer invoking init callback calls xsf.init 2`] = `
 </div>
 `;
 
+exports[`Consumer invoking setExtState callback calls xsf.setExtState 1`] = `
+<div>
+  <p>
+    extstate: 
+    {"foo":1}
+  </p>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    transition
+  </button>
+</div>
+`;
+
+exports[`Consumer invoking setExtState callback calls xsf.setExtState 2`] = `
+<div>
+  <p>
+    extstate: 
+    {"foo":2}
+  </p>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    transition
+  </button>
+</div>
+`;
+
 exports[`Consumer invoking transition callback calls xsf.transition 1`] = `
 <div>
   <p>
@@ -100,5 +130,7 @@ exports[`Consumer renders current state and extstate 3`] = `
 `;
 
 exports[`Consumer supplies init callback 1`] = `"pass"`;
+
+exports[`Consumer supplies setExtState callback 1`] = `"pass"`;
 
 exports[`Consumer supplies transition callback 1`] = `"pass"`;

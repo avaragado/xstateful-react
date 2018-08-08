@@ -21,6 +21,7 @@ type ProviderState = {
     ...XSFState,
     init: Function,
     transition: Function,
+    setExtState: Function,
 };
 
 type ConsumerFnProps = ProviderState;
@@ -111,6 +112,7 @@ const createReactMachine = (xsf: XStateful) => {
         extstate: xsf.extstate,
         init: () => {},
         transition: () => {},
+        setExtState: () => {},
     });
 
     class Provider extends React.Component<ProviderProps, ProviderState> {
@@ -122,6 +124,7 @@ const createReactMachine = (xsf: XStateful) => {
                 extstate: xsf.extstate,
                 init: xsf.init.bind(xsf),
                 transition: xsf.transition.bind(xsf),
+                setExtState: xsf.setExtState.bind(xsf),
             };
 
             xsf.on('change', this.update);
@@ -137,12 +140,18 @@ const createReactMachine = (xsf: XStateful) => {
 
         render() {
             // avoid passing the state object down
-            const { state, extstate, init, transition } = this.state;
+            const {
+                state,
+                extstate,
+                init,
+                transition,
+                setExtState,
+            } = this.state;
 
             return (
                 <context.Provider
                     {...this.props}
-                    value={{ state, extstate, init, transition }}
+                    value={{ state, extstate, init, transition, setExtState }}
                 />
             );
         }
@@ -220,6 +229,7 @@ const createReactMachine = (xsf: XStateful) => {
                     extstate: xsf.exstate,
                     init: xsf.init.bind(xsf),
                     transition: xsf.transition.bind(xsf),
+                    setExtState: xsf.setExtState.bind(xsf),
                 });
             }
         }
@@ -233,6 +243,7 @@ const createReactMachine = (xsf: XStateful) => {
                     extstate: xsf.exstate,
                     init: xsf.init.bind(xsf),
                     transition: xsf.transition.bind(xsf),
+                    setExtState: xsf.setExtState.bind(xsf),
                 });
             }
         }

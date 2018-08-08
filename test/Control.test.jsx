@@ -76,6 +76,7 @@ describe('Control', () => {
         });
         expect(mount.mock.calls[0][0].init).toBeInstanceOf(Function);
         expect(mount.mock.calls[0][0].transition).toBeInstanceOf(Function);
+        expect(mount.mock.calls[0][0].setExtState).toBeInstanceOf(Function);
     });
 
     test('invokes appropriate callback when unmounted', () => {
@@ -106,6 +107,7 @@ describe('Control', () => {
         });
         expect(unmount.mock.calls[0][0].init).toBeInstanceOf(Function);
         expect(unmount.mock.calls[0][0].transition).toBeInstanceOf(Function);
+        expect(unmount.mock.calls[0][0].setExtState).toBeInstanceOf(Function);
     });
 
     test('works', () => {

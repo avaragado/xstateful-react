@@ -169,27 +169,27 @@ This is a React component that gives access to values from `Machine.Provider` re
 `Machine` props:
 
 -   `cond?: boolean | (({ state, extstate }) => boolean)`
--   `component?: React.ComponentType<{ state, extstate, init, transition }>`
--   `render?: ({ state, extstate, init, transition }) => React.Node`
--   `children?: React.Node | ({ state, extstate, init, transition, match }) => React.Node`
+-   `component?: React.ComponentType<{ state, extstate, init, transition, setExtState }>`
+-   `render?: ({ state, extstate, init, transition, setExtState }) => React.Node`
+-   `children?: React.Node | ({ state, extstate, init, transition, setExtState, match }) => React.Node`
 
-The arguments/props `state`, `extstate`, `init` and `transition` correspond to the `XStateful` instance: `state` contains machine state, `extstate` contains extended state, `init` is a function to initialise or reset the machine, and `transition` is a function to send an event to the machine.
+The arguments/props `state`, `extstate`, `init`, `transition` and `setExtState` correspond to the `XStateful` instance: `state` contains machine state, `extstate` contains extended state, `init` is a function to initialise or reset the machine, `transition` is a function to send an event to the machine, and `setExtState` is a function to update extended state.
 
 If more than one of `component`, `render` and `children` are specified, `component` takes precedence over `render`, and `render` takes precedence over `children`.
 
 The boolean value from `cond` (which defaults to `true` if `cond` is omitted), combined with `component`/`render`/`children`, define what's rendered.
 
 -   With `component`:
-    -   When `cond` is true, creates a React element from that component, passing the props `state`, `extstate`, `init`, and `transition`, and renders that.
+    -   When `cond` is true, creates a React element from that component, passing the props `state`, `extstate`, `init`, `transition` and `setExtState`, and renders that.
     -   When `cond` is false, renders `null`.
 -   With `render`:
-    -   When `cond` is true, calls the render prop function passing a single object arg `{ state, extstate, init, transition }` and renders the result.
+    -   When `cond` is true, calls the render prop function passing a single object arg `{ state, extstate, init, transition, setExtState }` and renders the result.
     -   When `cond` is false, renders `null`.
 -   With `children` nodes (not function-as-child form):
     -   When `cond` is true, renders the children.
     -   When `cond` is false, renders `null`.
 -   With `children` function:
-    -   Calls the function, passing a single object arg `{ state, extstate, init, transition, match }`, where `match` is the boolean result of `cond`, and renders the result.
+    -   Calls the function, passing a single object arg `{ state, extstate, init, transition, setExtState, match }`, where `match` is the boolean result of `cond`, and renders the result.
 
 Examples:
 
@@ -221,7 +221,7 @@ Examples:
 />
 
 <Machine>
-    {({ state, extstate, init, transition }) => {
+    {({ state, extstate, init, transition, setExtState }) => {
         // render something!
     }}
 </Machine>
@@ -235,9 +235,9 @@ This is a React component that sprinkles some sugar over `Machine`, focusing on 
 
 -   `is?: string | Array<string> | (({ [activity: string]: boolean }) => boolean)`
 -   `not?: string | Array<string> | (({ [activity: string]: boolean }) => boolean)`
--   `component?: React.ComponentType<{ state, extstate, init, transition }>`
--   `render?: ({ state, extstate, init, transition }) => React.Node`
--   `children?: React.Node | ({ state, extstate, init, transition, match }) => React.Node`
+-   `component?: React.ComponentType<{ state, extstate, init, transition, setExtState }>`
+-   `render?: ({ state, extstate, init, transition, setExtState }) => React.Node`
+-   `children?: React.Node | ({ state, extstate, init, transition, setExtState, match }) => React.Node`
 
 The `is` and `not` props check against the statechart's current activities.
 
@@ -277,9 +277,9 @@ This is a React component that sprinkles some sugar over `Machine`, focusing on 
 
 -   `is?: string | Array<string> | (({ [activity: string]: boolean }) => boolean)`
 -   `not?: string | Array<string> | (({ [activity: string]: boolean }) => boolean)`
--   `component?: React.ComponentType<{ state, extstate, init, transition }>`
--   `render?: ({ state, extstate, init, transition }) => React.Node`
--   `children?: React.Node | ({ state, extstate, init, transition, match }) => React.Node`
+-   `component?: React.ComponentType<{ state, extstate, init, transition, setExtState }>`
+-   `render?: ({ state, extstate, init, transition, setExtState }) => React.Node`
+-   `children?: React.Node | ({ state, extstate, init, transition, setExtState, match }) => React.Node`
 
 The `is` and `not` props check against the statechart's current states.
 
@@ -327,11 +327,11 @@ This React component includes two props that map to React lifecycle methods. Use
 
 `Machine.Control` props:
 
--   `onDidMount?: ({ state, extstate, init, transition }) => void`
--   `onWillUnmount?: ({ state, extstate, init, transition }) => void`
+-   `onDidMount?: ({ state, extstate, init, transition, setExtState }) => void`
+-   `onWillUnmount?: ({ state, extstate, init, transition, setExtState }) => void`
 -   `children: React.Node`
 
-The arguments/props `state`, `extstate`, `init` and `transition` correspond to the `XStateful` instance: `state` contains machine state, `extstate` contains extended state, `init` is a function to initialise or reset the machine, and `transition` is a function to send an event to the machine.
+The arguments/props `state`, `extstate`, `init`, `transition` and `setExtState` correspond to the `XStateful` instance: `state` contains machine state, `extstate` contains extended state, `init` is a function to initialise or reset the machine, `transition` is a function to send an event to the machine, and `setExtState` is a function to update extended state.
 
 The component always renders its children.
 
@@ -378,6 +378,7 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 <!-- prettier-ignore -->
 | [<img src="https://avatars2.githubusercontent.com/u/886041?v=4" width="100px;"/><br /><sub><b>David Smith</b></sub>](http://avaragado.org)<br />[📖](https://github.com/avaragado/xstateful-react/commits?author=avaragado "Documentation") [💻](https://github.com/avaragado/xstateful-react/commits?author=avaragado "Code") [⚠️](https://github.com/avaragado/xstateful-react/commits?author=avaragado "Tests") | [<img src="https://avatars0.githubusercontent.com/u/4660659?v=4" width="100px;"/><br /><sub><b>ShMcK</b></sub>](http://medium.com/@shmck)<br />[📖](https://github.com/avaragado/xstateful-react/commits?author=ShMcK "Documentation") |
 | :---: | :---: |
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
